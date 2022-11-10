@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "b4ed7e23-553e-47ec-a479-ef96522c014b",
+		"name": "fetch-rewards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10980988"
+	},
+	"item": [
+		{
+			"name": "Get All Payers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/alltransactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alltransactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spend Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"points\": 800 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/spend",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"spend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddTransaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"payer\": \"D\", \"points\": 200, \"timestamp\": \"2022-11-10T18:16:22.939284Z\" }\n\n// { \"payer\": \"A\", \"points\": 100, \"timestamp\": \"2022-11-01T14:00:00Z\" }\n// { \"payer\": \"B\", \"points\": 200, \"timestamp\": \"2022-11-02T14:00:00Z\" }\n// { \"payer\": \"A\", \"points\": -50, \"timestamp\": \"2022-11-03T14:00:00Z\" }\n// { \"payer\": \"C\", \"points\": 400, \"timestamp\": \"2022-11-04T14:00:00Z\" }\n// { \"payer\": \"D\", \"points\": 500, \"timestamp\": \"2022-11-05T14:00:00Z\" }\n\n\n/*\n{ \"payer\": \"DANNON\", \"points\": 300, \"timestamp\": \"2022-10-31T10:00:00Z\" }\n{ \"payer\": \"UNILEVER\", \"points\": 200, \"timestamp\": \"2022-10-31T11:00:00Z\" }\n{ \"payer\": \"DANNON\", \"points\": -200, \"timestamp\": \"2022-10-31T15:00:00Z\" }\n{ \"payer\": \"MILLER COORS\", \"points\": 10000, \"timestamp\": \"2022-11-01T14:00:00Z\" }\n{ \"payer\": \"DANNON\", \"points\": 1000, \"timestamp\": \"2022-11-02T14:00:00Z\" }\n\n{ \"points\": 5000 }\n\n[\n\t{ \"payer\": \"DANNON\", \"points\": -100 },\n\t{ \"payer\": \"UNILEVER\", \"points\": -200 },\n\t{ \"payer\": \"MILLER COORS\", \"points\": -4,700 }\n]\n*/\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
